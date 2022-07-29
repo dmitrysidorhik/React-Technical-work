@@ -4,26 +4,27 @@ import { menu } from './menu'
 
 import styles from './Header.module.scss'
 
+
 const Header = () => {
     return (
-        <>
-            <div className="logo">
-                <img src={LogoImage} alt='' />
+        <div className={styles.header}>
+            <div className={styles.logo}>
+                <img src={LogoImage} alt='' height='50'/>
             </div>
-            <div className="menu-wrapper">
-                <ul>
+            <div className={styles.wrapper}>
+                <ul className={styles.menu}>
                     {menu.map((item, idx) => (
                         <li key={`menu item ${idx}`}>
                             <a href={item.link}>{item.title}</a>
                         </li>
                     ))}
                 </ul>
-                <div className="auth-buttons">
-                    <button className="login">Login</button>
-                    <button className="sign-up">Sign up</button>
+                <div className={styles.buttons}>
+                    <button className={styles['login-button']}>Login</button>
+                    <button className={styles['sign-up-button']}>Sign up</button>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
