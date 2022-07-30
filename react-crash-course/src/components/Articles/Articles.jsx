@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import styles from './Articles.module.scss'
 
-
-
 const Articles = () => {
     const [posts, setPosts] = useState([])
     const [loading, setLoading] = useState(true)
