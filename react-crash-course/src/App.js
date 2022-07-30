@@ -3,7 +3,7 @@ import Articles from "./components/Articles/Articles";
 
 const App = () => {
   return (
-    <div style={{padding: '20px 40px', backgroundColor: 'gray'}}>
+    <div style={{padding: '20px 40px', backgroundColor: "aaaaaa"}}>
       <Header />
       <Articles />
     </div>
