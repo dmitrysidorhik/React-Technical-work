@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
+import axios from 'axios'
 import styles from './Articles.module.scss'
+
+
 
 const Articles = () => {
     const [posts, setPosts] = useState([])
@@ -9,16 +12,15 @@ const Articles = () => {
         setLoading(true)
         const fetchData = async () => {
             try {
-                const response = await fetch(
+                const {data} = await axios.get(
                     'https://jsonplaceholder.typicode.com/posts'
                 )
-                const data = await response.json()
+                console.log(data)
                 setPosts(data)
             } catch (error) {
                 console.log(error)
             }
             setLoading(false)
-
         }
         fetchData()
     }, [])
